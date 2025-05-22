@@ -1,0 +1,83 @@
+body {
+  font-family: 'Fredoka', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px #444;
+}
+
+.game-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.cell {
+  background-color: #fefefe;
+  border: 3px solid #ccc;
+  border-radius: 12px;
+  font-size: 2.5rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+  background-color: #f0f8ff;
+  transform: scale(1.05);
+}
+
+.cell.taken {
+  pointer-events: none;
+  color: #888;
+}
+
+.cell.win {
+  background-color: #9fff9f;
+  border-color: #00c853;
+  color: #2e7d32;
+}
+
+#message {
+  font-size: 1.4rem;
+  margin: 15px 0;
+  color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #008ba3;
+}
